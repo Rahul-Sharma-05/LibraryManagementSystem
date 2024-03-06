@@ -17,8 +17,10 @@ public class demo {
 				String pass = rs.getString("passwor");
 				if(s2.equals(pass)) {
 					System.out.println("Login Successfull..");
-				}else {
-					System.out.println("Login Faild. User Id or Passwrod Mismachted.");
+					system.out.println();
+					}else 
+				{
+					System.out.println("Login Faild. User Id or Password Mismachted.");
 				}
 			}else {
 				System.out.println("User id Not found.");
