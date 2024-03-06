@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+input type=button value="Print" onclick="window.print()">
 
 
 
