@@ -32,21 +32,21 @@ Insert into Admin values
 Select * from Admin;
 
 CREATE TABLE Book
-(BookId INT auto_increment PRIMARY KEY ,
+(BookId INT PRIMARY KEY ,
 BookName varchar(50),
 BookAuthor varchar(50),
 BookPublication varchar(50),
 BookQuantity INT default 0
 );
 
-INSERT INTO Book (BookName, BookAuthor, BookPublication, BookQuantity)
+INSERT INTO Book (BookId, BookName, BookAuthor, BookPublication, BookQuantity)
 VALUES 
-("Fire of Wings", "A.P.J. Kalam",	"KD Publication", 10),
-("My Experiment with Truth", "M.K. Gandhi",	"RK Books", 15),
-("XYZ",	"Ram Rahim", "Kiran Publication", 5),
-("Programming with C", "Reema Thareja", "OxFord Publication", 8),
-("Programming with C", "Reema Thareja", "OxFord Publication", 0),
-("Programming with C", "Reema Thareja", "OxFord Publication", 0);
+(1, "Fire of Wings", "A.P.J. Kalam",	"KD Publication", 10),
+(2, "My Experiment with Truth", "M.K. Gandhi",	"RK Books", 15),
+(3, "XYZ",	"Ram Rahim", "Kiran Publication", 5),
+(4, "Programming with C", "Reema Thareja", "OxFord Publication", 8),
+(5, "Programming with C", "Reema Thareja", "OxFord Publication", 0),
+(6, "Programming with C", "Reema Thareja", "OxFord Publication", 0);
 
 
 
