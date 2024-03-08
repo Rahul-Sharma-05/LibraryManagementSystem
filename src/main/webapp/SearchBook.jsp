@@ -18,7 +18,7 @@
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/learnhiber","root","Rahul@earth5");  
+			"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 			
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book WHERE BookId=?"); 
 			pstm.setInt(1, BookId);
@@ -58,7 +58,7 @@
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/learnhiber","root","Rahul@earth5");  
+			"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 			
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book");
 			ResultSet rs = pstm.executeQuery();
