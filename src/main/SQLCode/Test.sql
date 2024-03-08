@@ -1,6 +1,5 @@
 CREATE database test;
 USE test;
-use learnhiber;
 
 Create table Admin (
 AdminId int primary key,
