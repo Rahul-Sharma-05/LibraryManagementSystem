@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <div class="container">
+        <h1>STUDENT DETAIL FORM</h1>
+    
+        <form Action="Student.jsp" method="post">
+        	
+            <pre><p>Student Name:              <input type="text" size="50" name="Name" id="Name" placeholder="Enter your name" required></p></pre>
+            <pre><p>Student E-mail Id:         <input type="email" size="50" name="Email" id="Email" placeholder="Enter your email id" required></p></pre>
+            <pre><p>Student Contact:           <input type="number" min=1000000000 max=9999999999 name="Contact" id="Contact" placeholder="Enter your Contact number" required></p></pre>
+            <pre><label for="Gender" >Gender :                  <input class="inline" type="radio" name="Gender" value="Male"/ checked>Male <input class="inline" type="radio" name="Gender" value="Female"/>Female <input class="inline" type="radio" name="Gender" value="Other"/>Other</label></pre>
+            <pre><p>Student City:              <input type="text" size="20" name="City" id="City" placeholder="Enter your City" required></p></pre>
+            <pre><p>Default Password:          <input type="password" size="15" name="Password" id="Password" placeholder="Student@123" value="Student@123"></p></pre>
+               
+             <input type="SUBMIT" value="Add Student" name="b1">    <input type="RESET" value="RESET">
+        </form>
+</body>
+</html>
+    
+     
+    
