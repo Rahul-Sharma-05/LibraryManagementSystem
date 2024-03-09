@@ -11,7 +11,7 @@
 	<%
 	String bt = request.getParameter("b1");
 	
-	if(bt.equalsIgnoreCase("Login")) {
+	if(bt.equalsIgnoreCase("AdminLogin")) {
 		
 		String id1 = request.getParameter("t1");
 		int id = Integer.parseInt(id1);

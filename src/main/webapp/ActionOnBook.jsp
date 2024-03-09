@@ -13,14 +13,18 @@
 	
 		
 		try{
+			// Creating DataBase Connection
 			
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con = DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
+			"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 			
-			String bt1 = request.getParameter("b1");
 			
-			if(bt1.equalsIgnoreCase("add")) {
+			String buttonValue = request.getParameter("b1");
+			
+			// Start of Add Book
+			
+			if(buttonValue.equalsIgnoreCase("add")) {
 				
 				String st1 = request.getParameter("t1");
 				int st11 = Integer.parseInt(st1); 
@@ -94,23 +98,93 @@
 				//End of AddBook
 				
 				
+				// Start of Update Book
+				
+				if(buttonValue.equalsIgnoreCase("Update")) {
+					
+					String st1 = request.getParameter("t1");
+					int st11 = Integer.parseInt(st1);
+					
+					String st2 = request.getParameter("t2");
+					String st3 = request.getParameter("t3");
+					String st4 = request.getParameter("t4");
+					
+					int st55 = 0;
+					String st5 = request.getParameter("t5");
+					if(st5 != ""){
+					st55 = Integer.parseInt(st5);
+					}
+					
+					
+					Statement stmt = con.createStatement();
+					ResultSet rs = stmt.executeQuery("SELECT BookId FROM Book");
+					
+					boolean b = false;
+					
+					while(rs.next()) {
+						
+						int val = rs.getInt(1);
+						
+						if(val == st11) {
+							
+							if(st2 != "") {
+								PreparedStatement pstm = con.prepareStatement("UPDATE Book SET BookName = ? WHERE BookId = ?");
+								pstm.setString(1, st2);
+								pstm.setInt(2, st11);
+								pstm.executeUpdate();
+							}
+							
+							if(st3 != "") {
+								PreparedStatement pstm = con.prepareStatement("UPDATE Book SET BookAuthor = ? WHERE BookId = ?");
+								pstm.setString(1, st3);
+								pstm.setInt(2, st11);
+								pstm.executeUpdate();
+							}
+							
+							if(st4 != "") {
+								PreparedStatement pstm = con.prepareStatement("UPDATE Book SET BookPublication = ? WHERE BookId = ?");
+								pstm.setString(1, st4);
+								pstm.setInt(2, st11);
+								pstm.executeUpdate();
+							}
+							
+							if(st5 != "") {
+								PreparedStatement pstm = con.prepareStatement("UPDATE Book SET BookQuantity = ? WHERE BookId = ?");
+								pstm.setInt(1, st55);
+								pstm.setInt(2, st11);
+								pstm.executeUpdate();
+							}
+							
+							out.println("<script>alert('Book Updated Successfully.')</script>");
+							b=true;
+							break;
+						}
+					}
+					if(b == false){
+						out.println("<script>alert('Book Does Not Exist.')</script>");
+					}
+				}
+				
+				// End of Update Book
+				
+				
 				//Start of DeleteBook
 				
-				String b3=request.getParameter("b1");
-				
-				if(b3.equalsIgnoreCase("Delete")){
-					String t1 = request.getParameter("t1");
-					int st1=Integer.parseInt(t1);
+				if(buttonValue.equalsIgnoreCase("Delete")){
+					
+				String st1 = request.getParameter("t1");
+				int st11=Integer.parseInt(st1);
 					
 				Statement stmt1=con.createStatement();
 				ResultSet rs=stmt1.executeQuery("Select BookId from Book");
 				
 				boolean b=false;
+				
 				while(rs.next()){
 					int val=rs.getInt(1);
 					
 				
-					if(val==st1){
+					if(val==st11){
 						Statement stmt2=con.createStatement();
 						stmt2.executeUpdate("delete from Book where BookId=" +val);
 						out.println("<script>alert('Book Deleted Successfully.')</script>");
@@ -125,6 +199,7 @@
 				
 				}
 				
+<<<<<<< HEAD
 				//End of AddBook;
 				
 				//Start of UpdateBook;
@@ -134,6 +209,10 @@
 		
 	
 					
+=======
+				// End of Delete Book
+				
+>>>>>>> 068c9d03f74fb3291a928120f8cfb5d62820881f
 		}catch(Exception e){
 			e.printStackTrace();
 		}
