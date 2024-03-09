@@ -11,7 +11,7 @@
 	<%
 	String bt = request.getParameter("b1");
 	
-	if(bt.equalsIgnoreCase("Login")) {
+	if(bt.equalsIgnoreCase("AdminLogin")) {
 		
 		String id1 = request.getParameter("t1");
 		int id = Integer.parseInt(id1);
@@ -21,7 +21,7 @@
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
 		Connection con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
+		"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
 		
 		PreparedStatement pstm = con.prepareStatement("SELECT password FROM Admin WHERE AdminId=?"); 
 		pstm.setInt(1, id);
@@ -46,8 +46,50 @@
 		}catch(Exception e){
 			System.out.println(e);
 	}
+	}
+	       //End Of Admin Login
+	       
+	       //Start of Student Login
+	       
+	       
+	 if(bt.equalsIgnoreCase("StudentLogin")) {
+		
+		String id1 = request.getParameter("t1");
+		int id = Integer.parseInt(id1);
+		String givenPass = request.getParameter("t2");
+	
+			
+	try{  
+		Class.forName("com.mysql.jdbc.Driver");  
+		Connection con=DriverManager.getConnection(  
+		"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
+		
+		PreparedStatement pstm = con.prepareStatement("SELECT Password FROM Student WHERE StudentId=?"); 
+		pstm.setInt(1, id);
+		ResultSet rs = pstm.executeQuery();
+		
+		if (rs.next()) {
+			String pass = rs.getString("password");
+			if(givenPass.equals(pass)) {
+				
+				out.println("<script>alert('Login Successfull..')</script>");
+				
+				response.sendRedirect("StudentDashboard.html");
+				
+			}else {
+				out.println("<script>alert('Login Faild. User Id or Password Mismachted.')</script>");
+			}
+		}else {
+			out.println("<script>alert('User id Not found.')</script>");
+		}
+			
+			
+		}catch(Exception e){
+			System.out.println(e);
+	}
 	
 	}
+	
 	
 	%>
 	
