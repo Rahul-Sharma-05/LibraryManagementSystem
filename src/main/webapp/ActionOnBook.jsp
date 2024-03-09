@@ -199,8 +199,20 @@
 				
 				}
 				
+<<<<<<< HEAD
+				//End of AddBook;
+				
+				//Start of UpdateBook;
+				
+				
+				 
+		
+	
+					
+=======
 				// End of Delete Book
 				
+>>>>>>> 068c9d03f74fb3291a928120f8cfb5d62820881f
 		}catch(Exception e){
 			e.printStackTrace();
 		}
