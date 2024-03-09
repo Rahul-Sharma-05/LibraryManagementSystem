@@ -21,7 +21,7 @@
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
 		Connection con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
+		"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 		
 		PreparedStatement pstm = con.prepareStatement("SELECT password FROM Admin WHERE AdminId=?"); 
 		pstm.setInt(1, id);
@@ -62,7 +62,7 @@
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
 		Connection con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
+		"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 		
 		PreparedStatement pstm = con.prepareStatement("SELECT Password FROM Student WHERE StudentId=?"); 
 		pstm.setInt(1, id);
@@ -71,10 +71,24 @@
 		if (rs.next()) {
 			String pass = rs.getString("password");
 			if(givenPass.equals(pass)) {
-				
+				String name = "Rahul";
 				out.println("<script>alert('Login Successfull..')</script>");
 				
-				response.sendRedirect("StudentDashboard.html");
+			//	response.sendRedirect("StudentDashboard.html?val" + name);
+				%>
+				<script type="text/javascript">
+				
+				function call(value){
+					
+					alert(value);
+					localStorage.setItem('v', value);
+					window.location.href = 'StudentDashboard.html';
+					
+				}
+				
+				call(name);
+				</script>
+				<%
 				
 			}else {
 				out.println("<script>alert('Login Faild. User Id or Password Mismachted.')</script>");
