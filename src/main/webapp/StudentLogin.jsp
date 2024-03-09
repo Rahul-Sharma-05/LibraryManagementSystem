@@ -23,7 +23,7 @@
 		Connection con=DriverManager.getConnection(  
 		"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
 		
-		PreparedStatement pstm = con.prepareStatement("SELECT password FROM Admin WHERE AdminId=?"); 
+		PreparedStatement pstm = con.prepareStatement("SELECT Password FROM Admin WHERE AdminId=?"); 
 		pstm.setInt(1, id);
 		ResultSet rs = pstm.executeQuery();
 		
