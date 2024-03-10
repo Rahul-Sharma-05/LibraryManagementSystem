@@ -75,20 +75,6 @@
 				out.println("<script>alert('Login Successfull..')</script>");
 				
 			//	response.sendRedirect("StudentDashboard.html?val" + name);
-				%>
-				<script type="text/javascript">
-				
-				function call(value){
-					
-					alert(value);
-					localStorage.setItem('v', value);
-					window.location.href = 'StudentDashboard.html';
-					
-				}
-				
-				call(name);
-				</script>
-				<%
 				
 			}else {
 				out.println("<script>alert('Login Faild. User Id or Password Mismachted.')</script>");
