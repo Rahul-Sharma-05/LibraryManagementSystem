@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p> <%request.getParameter("Submit");%></p>
+	<p> Welcome  <%= session.getAttribute("StudentName")%></p>
+	<p> Your Student Id is : <%= session.getAttribute("StudentId")%></p>
+	
+	<a href="UpdateProfile.html">Update Profile</a>
 </body>
 </html>

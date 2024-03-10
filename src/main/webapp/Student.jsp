@@ -37,7 +37,23 @@
 		pstm.setString(6, st6);
 		
 		pstm.executeUpdate();
-		out.println("<script>alert('User Added Successfully.')</script>");
+		if(btn.equalsIgnoreCase("Submit Form")){
+		out.println("<script>alert('Registration Completed.')</script>");
+		%>
+		<script>
+		window.location.href = "StudentLogin.html";
+		</script>
+		<%
+		}else{
+		out.println("<script>alert('Student Added Successfully.')</script>");
+		%>
+		<script>
+		window.location.href = "AddStudent.html";
+		</script>
+		<%
+		}
+		
+		
 		}
 		
 		// End of Add Student
@@ -90,7 +106,62 @@
 			// End of Delete Student
 		
 		
-		
+			// Start of Update Student
+			
+			if(btn.equalsIgnoreCase("Update")) {
+				
+				int id = (int) session.getAttribute("StudentId");
+				String name = request.getParameter("Name");
+				String email = request.getParameter("Email");
+				String password = request.getParameter("Password");
+				String contact = request.getParameter("Contact");
+				String city = request.getParameter("City");
+				
+				if(name != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentName = ? WHERE StudentId = ?");
+					pstm.setString(1, name);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(email != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentEmail = ? WHERE StudentId = ?");
+					pstm.setString(1, email);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(password != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET password = ? WHERE StudentId = ?");
+					pstm.setString(1, password);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(contact != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentContact = ? WHERE StudentId = ?");
+					pstm.setString(1, contact);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(city != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentCity = ? WHERE StudentId = ?");
+					pstm.setString(1, city);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				out.println("<script>alert('Profile Updated Successfully.')</script>");
+				
+				%>
+				<script>
+				window.location.href = "StudentDashboard.jsp";
+				</script>
+				<%
+		}
+	
+			// End of Update Student
 		
 		
 		}catch(Exception e){
