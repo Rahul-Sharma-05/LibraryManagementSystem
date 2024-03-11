@@ -64,6 +64,13 @@
 	
 	if(bt2.equalsIgnoreCase("Search All")) {
 		
+		%>
+		<form action="UpdateStudent.jsp" method="post">
+			<pre>Enter Student Id to Update :  <input type="number" name="t1"></pre>
+			<button type="submit" value="Update" name="b1">Update Student</button>
+		</form>
+		<%
+		
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(  

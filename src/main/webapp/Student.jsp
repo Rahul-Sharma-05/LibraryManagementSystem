@@ -106,7 +106,7 @@
 			// End of Delete Student
 		
 		
-			// Start of Update Student
+			// Start of Update Student by Student
 			
 			if(btn.equalsIgnoreCase("Update")) {
 				
@@ -161,9 +161,68 @@
 				<%
 		}
 	
-			// End of Update Student
+			// End of Update Student by Student
 		
 		
+			// Start of Update Student by Admin
+			
+			if(btn.equalsIgnoreCase("Update Student")) {
+				
+				String sid = request.getParameter("id");
+				int id = Integer.parseInt(sid);
+				String name = request.getParameter("Name");
+				String email = request.getParameter("Email");
+				String password = request.getParameter("Password");
+				String contact = request.getParameter("Contact");
+				String city = request.getParameter("City");
+				
+				if(name != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentName = ? WHERE StudentId = ?");
+					pstm.setString(1, name);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(email != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentEmail = ? WHERE StudentId = ?");
+					pstm.setString(1, email);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(password != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET password = ? WHERE StudentId = ?");
+					pstm.setString(1, password);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(contact != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentContact = ? WHERE StudentId = ?");
+					pstm.setString(1, contact);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				if(city != "") {
+					PreparedStatement pstm = con.prepareStatement("UPDATE Student SET StudentCity = ? WHERE StudentId = ?");
+					pstm.setString(1, city);
+					pstm.setInt(2, id);
+					pstm.executeUpdate();
+				}
+				
+				out.println("<script>alert('Student Details Updated Successfully.')</script>");
+				
+				%>
+				
+				<script>
+				window.location.href = "AdminDashboard.jsp";
+				</script>
+				<%
+		}
+	
+			// End of Update Student by Admin
+			
 		}catch(Exception e){
 		System.out.println(e);
 		

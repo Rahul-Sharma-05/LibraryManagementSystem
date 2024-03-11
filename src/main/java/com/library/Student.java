@@ -1,4 +1,4 @@
-package library;
+package com.library;
 
 public class Student {
 	private int studentid;

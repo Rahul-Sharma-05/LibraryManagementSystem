@@ -46,8 +46,8 @@ public class Login extends HttpServlet {
     				hs.setAttribute("AdminName", AdminName);
     				hs.setAttribute("AdminId", id);
     				
-    				response.sendRedirect("AdminDashboard.html");
-    				RequestDispatcher rd = request.getRequestDispatcher("/StudentDashboard.jsp");
+    				
+    				RequestDispatcher rd = request.getRequestDispatcher("/AdminDashboard.jsp");
     				rd.forward(request, response);
     				
     			}else {
