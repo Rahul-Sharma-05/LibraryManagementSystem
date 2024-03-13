@@ -4,20 +4,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Borrowring</title>
+<title>Borrowing</title>
+<!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-	<video width="320" height="240" autoplay muted>
-  <source src="tick.mp4" type="video/mp4">
-</video>
-<p>Thank You! Book Borrowed.</p>
-<form action="StudentDashboard.jsp">
-	<button type="Submit" >Go To Dashboard</button>
-</form>
-<form action="Logout">
-	<button type="Submit" >Logout</button></form>
-	
-	
-</form>
+
+<%
+    String bid = request.getParameter("BookId");
+%>
+
+<script type="text/javascript">
+    // JavaScript code for confirmation dialog
+    var result = confirm("Press a button!");
+    if (result) {
+        // Send a POST request to Tick2.jsp with the bookId parameter
+        $.post('Tick2.jsp', { BookId: <%= bid %> });
+        window.location.href = "Tick3.html";
+    } else {
+    	var st = "Search All";
+    	window.location.href = "IssueBook.jsp?b1="+ st;
+    }
+</script>
+
 </body>
 </html>

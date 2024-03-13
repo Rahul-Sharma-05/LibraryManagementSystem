@@ -12,45 +12,7 @@
 	<%@ page import="java.text.SimpleDateFormat"%>
 	<%@ page import="java.util.Date"%>
 	
-	<script>
-		function confirmAction(par1) {
-			int bid = par1;
-			var result = confirm("Are you sure you want to proceed?");
-			if (result) {
-			<%	
-				int id = (int) session.getAttribute("StudentId");
-				String bi ="<script>document.writeln(bid)</script>";
-		//		String bid1 = request.getParameter("bookId");
-				//int bid = Integer.parseInt(bid1);
-		//		System.out.println("Student id : " +id);
-		//		System.out.println("Book id : " +bid1);
-				Date d = new Date();
-				SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
-			
-				try {
-					Class.forName("com.mysql.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
-
-					PreparedStatement pstm = con.prepareStatement("INSERT INTO IssuedBook (BookId, StudentId, IssueDate) VALUES (?,?,?)");
-					pstm.setString(1, bi);
-					pstm.setInt(2, id);
-					pstm.setString(3, sdf.format(d));
-					pstm.executeUpdate();
-					
-					
-					
-				}catch (Exception e) {
-					e.getStackTrace();
-				}
-				
-				
-				%>
-				window.location.href = "Tick1.jsp";
-			}else{
-				
-			}
-		}
-	</script>
+	
 	<%
 	String bt = request.getParameter("b1");
 
@@ -60,7 +22,7 @@
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
 
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book WHERE BookId=?");
 			pstm.setInt(1, BookId);
@@ -73,7 +35,7 @@
 			<th>BookAuthor</th>
 			<th>BookPublication</th>
 			<th>BookQuantity</th>
-			<th></th>
+			<th>Link To Issue</th>
 		</tr>
 		<%
 		while (rs.next()) {
@@ -85,9 +47,9 @@
 			<th><%=rs.getString(4)%></th>
 			<th><%=rs.getString(5)%></th>
 			<th>
-				<button onclick="confirmAction()" type="submit" name="bookId"
-					value="<%=rs.getString(1)%>" <%if (rs.getInt(5) <= 0) {%>
-					disabled <%}%>>Issue</button>
+			<%if(rs.getInt(5) > 0){ %>
+			<a href="Tick1.jsp?BookId=<%= rs.getInt(1) %>" >Issue</a>
+			<% }else { %>Book Not Available<% } %>
 			</th>
 		</tr>
 		<%
@@ -109,7 +71,7 @@
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
 
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book");
 			ResultSet rs = pstm.executeQuery();
@@ -121,7 +83,7 @@
 			<th>BookAuthor</th>
 			<th>BookPublication</th>
 			<th>BookQuantity</th>
-			<th></th>
+			<th>Link To Issue</th>
 		</tr>
 		<%
 		while (rs.next()) {
@@ -134,11 +96,9 @@
 			<th><%=rs.getString(4)%></th>
 			<th><%=rs.getString(5)%></th> 
 			<th>
-			<button onclick="confirmAction(${ rs.getInt(1)})" type="submit"
-				name="bookId" value="<%= rs.getInt(1) %>"
-					<%if (rs.getInt(5) <= 0) {%> disabled <%}%>>Issue</button>
-			<a href="Tick1.jsp?id=<%= rs.getInt(1) %>" >Issue</a>
-					
+			<%if(rs.getInt(5) > 0){ %>
+			<a href="Tick1.jsp?BookId=<%= rs.getInt(1) %>" >Issue</a>
+			<% }else { %>Book Not Available<% } %>
 			</th>
 		</tr>
 		<%
