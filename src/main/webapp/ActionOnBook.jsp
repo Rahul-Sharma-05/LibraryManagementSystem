@@ -87,11 +87,21 @@
 							pstm.executeUpdate();
 							
 							out.println("<script>alert('Book Added Successufully.')</script>");
+							%>
+							<script>
+							window.location.href = "AddBook.html";
+							</script>
+							<%
 							
 						}
 					
 				}else{
 					out.println("<script>alert('Book Already Exist.')</script>");
+					%>
+					<script>
+					window.location.href = "AddBook.html";
+					</script>
+					<%
 				}
 			}
 				
@@ -157,14 +167,24 @@
 							
 							out.println("<script>alert('Book Updated Successfully.')</script>");
 							b=true;
+							%>
+							<script>
+							window.location.href = "UpdateBook.html";
+							</script>
+							<%
 							break;
 						}
 					}
 					if(b == false){
 						out.println("<script>alert('Book Does Not Exist.')</script>");
+						%>
+						<script>
+						window.location.href = "UpdateBook.html";
+						</script>
+						<%
 					}
 				}
-				
+		
 				// End of Update Book
 				
 				
@@ -189,30 +209,28 @@
 						stmt2.executeUpdate("delete from Book where BookId=" +val);
 						out.println("<script>alert('Book Deleted Successfully.')</script>");
 						b=true;
+						%>
+						<script>
+						window.location.href = "DeleteBook.html";
+						</script>
+						<%
 						break;
 					}
 					
 				}
 				if(b==false){
 					out.println("<script>alert('Book Does Not Exist.')</script>");
+					%>
+					<script>
+					window.location.href = "DeleteBook.html";
+					</script>
+					<%
 				}
 				
 				}
-				
-<<<<<<< HEAD
-				//End of AddBook;
-				
-				//Start of UpdateBook;
-				
-				
-				 
-		
-	
-					
-=======
 				// End of Delete Book
 				
->>>>>>> 068c9d03f74fb3291a928120f8cfb5d62820881f
+
 		}catch(Exception e){
 			e.printStackTrace();
 		}
