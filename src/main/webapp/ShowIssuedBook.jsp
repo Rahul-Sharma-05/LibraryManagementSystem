@@ -8,13 +8,16 @@
 </head>
 <body>
 
+  <p> Welcome  <%= session.getAttribute("StudentName")%></p>
+	<p> Your Student Id is : <%= session.getAttribute("StudentId")%></p>
+
 	<%@ page import="java.sql.*"%>
 	<%@ page import="java.text.SimpleDateFormat"%>
 	<%@ page import="java.util.Date"%>
 
 	<%try{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
 	
 		String btn = request.getParameter("btn");
 		int sid = (int) session.getAttribute("StudentId");
