@@ -15,5 +15,13 @@
 	<a href="IssueBook.jsp?b1=Search All">Issue Book</a><br>
 	<a href="ShowIssuedBook.jsp?btn=ShowIssue" >Show Issued Book</a><br>
 	<a href="ShowIssuedBook.jsp?btn=Return" name="b1">Return Book</a><br>
+	
+	<form action="Login" method="post">
+		<button type="submit" value="StudentLogin" name="btn">Login</button>
+	</form>
+	<form action="Logout" method="post">
+		<button type="submit" value ="slogout" name="btn">Logout</button>
+	</form>
+	
 </body>
 </html>

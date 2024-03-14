@@ -15,7 +15,9 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/login")
 public class Login extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 
         String bt = request.getParameter("b1");
     	PrintWriter out = response.getWriter();
