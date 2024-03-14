@@ -13,7 +13,7 @@
 	<a href="UpdateProfile.html">Update Profile</a><br>
 	<a href="SearchBookStudent.html">Search Book</a><br>
 	<a href="IssueBook.jsp?b1=Search All">Issue Book</a><br>
-	<a href="ShowIssuedBook.jsp">Show Issued Book</a><br>
-	<a href="ShowIssuedBook.jsp">Return Book</a><br>
+	<a href="ShowIssuedBook.jsp?btn=ShowIssue" >Show Issued Book</a><br>
+	<a href="ShowIssuedBook.jsp?btn=Return" name="b1">Return Book</a><br>
 </body>
 </html>
