@@ -74,7 +74,7 @@
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
+			"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
 			
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Student");
 			ResultSet rs = pstm.executeQuery();
