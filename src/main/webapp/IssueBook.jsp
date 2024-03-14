@@ -22,7 +22,7 @@
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
 
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book WHERE BookId=?");
 			pstm.setInt(1, BookId);
@@ -71,7 +71,7 @@
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Aaryan@004");
 
 			PreparedStatement pstm = con.prepareStatement("SELECT * FROM Book");
 			ResultSet rs = pstm.executeQuery();
@@ -97,7 +97,7 @@
 			<th><%=rs.getString(5)%></th> 
 			<th>
 			<%if(rs.getInt(5) > 0){ %>
-			<a href="Tick1.jsp?BookId=<%= rs.getInt(1) %>" >Issue</a>
+			<a href="Tick1.jsp?BookId=<%= rs.getInt(1) %>&action=issue" >Issue</a>
 			<% }else { %>Book Not Available<% } %>
 			</th>
 		</tr>
