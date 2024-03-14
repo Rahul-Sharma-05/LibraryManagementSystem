@@ -7,10 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="StudentDetails.html">Search Student Details</a>
+	<a href="StudentDetails.html">Search Student Details</a><br>
+	<a href="SearchStudentDetails.html?b1=Search All">Update Student Details</a><br>
+	<a href="ViewIssuedDetails.jsp?btn=All">View Issued and Returned Book</a><br>
+	<a href="ViewIssuedDetails.jsp?btn=Returned">View Returned Book</a><br>
+	<a href="ViewIssuedDetails.jsp?btn=Issued">View Issued</a><br>
 	
-	<form action="SearchStudentDetails.jsp" >
-		<button type="submit" value="Search All" name="b1">Update Student Details</button>
-	</form>
+	
 </body>
 </html>
