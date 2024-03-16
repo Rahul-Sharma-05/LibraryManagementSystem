@@ -17,8 +17,7 @@ public class Logout extends HttpServlet{
 		String btn = request.getParameter("btn");
 		if(btn.equalsIgnoreCase("slogout")) {
 			HttpSession s = request.getSession();	
-			    s.removeAttribute("StudentId");
-			    s.removeAttribute("StudentName");
+			    s.invalidate();
 				RequestDispatcher rd = request.getRequestDispatcher("/StudentLogin.html");
 				rd.forward(request, response);
 				
