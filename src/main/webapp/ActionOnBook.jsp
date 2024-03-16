@@ -17,7 +17,7 @@
 			
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con = DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
+			"jdbc:mysql://localhost:3306/test","root","Aaryan@004");  
 			
 			
 			String buttonValue = request.getParameter("b1");
