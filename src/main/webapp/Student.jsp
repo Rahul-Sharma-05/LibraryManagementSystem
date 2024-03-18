@@ -12,7 +12,7 @@
 	try{
 		Class.forName("com.mysql.jdbc.Driver");  
 		Connection con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306/test","root","Rahul@earth5");  
+		"jdbc:mysql://localhost:3306/test","root","Admin@123");  
 		
 		String btn=request.getParameter("b1");
 		
