@@ -38,8 +38,11 @@
 			int i = pstm.executeUpdate();
 			if (i > 0) {
 			//sending email
-			RequestDispatcher rd = request.getRequestDispatcher("Mailing");
-    				rd.forward(request, response);
+			%>
+	<script>
+		window.location.href = "Mailing.jsp";
+	</script>
+	<%
 		
 		//redirecting to another page
 
