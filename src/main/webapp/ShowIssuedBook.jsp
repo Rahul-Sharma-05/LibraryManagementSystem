@@ -17,7 +17,7 @@
 
 	<%try{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rahul@earth5");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Admin@123");
 	
 		String btn = request.getParameter("btn");
 		int sid = (int) session.getAttribute("StudentId");
