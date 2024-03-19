@@ -43,7 +43,7 @@
 	String senderEmail = "libcocas777@gmail.com";
 	String senderPassword = "Lib@COCAS#777";
 
-	// Recipient's email address
+	// Recipient's email addresss
 	String recipientEmail = st2;
 
 	// SMTP server details
