@@ -14,7 +14,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/aarya/Downloads/jar_files/javax.servlet-api-4.0.1.jar"/>
+=======
+	<classpathentry exported="true" kind="lib" path="C:/Users/rahul.DESKTOP-JAVTJSI/Downloads/jar_files/javax.servlet-api-4.0.1.jar"/>
+>>>>>>> 6764d625d56656806186150276a782523ca60a85
 	<classpathentry kind="lib" path="C:/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
