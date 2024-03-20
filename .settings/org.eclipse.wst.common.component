@@ -4,6 +4,12 @@
                 
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
                 
+<<<<<<< HEAD
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
+                
+=======
+>>>>>>> bf27185a1cff667f1107c843531a74573637da92
         <property name="context-root" value="LibraryManagementSystem"/>
                 
         <property name="java-output-path" value="/LibraryManagementSystem/build/classes"/>

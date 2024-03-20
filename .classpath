@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/mysql-connector-j-8.3.0.jar"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.1">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-<<<<<<< HEAD
-	<classpathentry exported="true" kind="lib" path="C:/javax.servlet-api-4.0.1.jar"/>
-=======
-<<<<<<< HEAD
-	<classpathentry kind="lib" path="C:/Users/aarya/Downloads/jar_files/javax.servlet-api-4.0.1.jar"/>
-=======
-	<classpathentry exported="true" kind="lib" path="C:/Users/rahul.DESKTOP-JAVTJSI/Downloads/jar_files/javax.servlet-api-4.0.1.jar"/>
->>>>>>> 6764d625d56656806186150276a782523ca60a85
-	<classpathentry kind="lib" path="C:/mail.jar"/>
->>>>>>> 1a178901026419580e7b0996eab0726f8db6db68
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/javax.mail-api-1.6.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>

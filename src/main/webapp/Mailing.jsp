@@ -41,7 +41,7 @@
 
 	// Sender's email address
 	String senderEmail = "libcocas777@gmail.com";
-	String senderPassword = "Lib@COCAS#777";
+	String senderPassword = "fdbrsqlugjgmdbpk";
 
 	// Recipient's email addresss
 	String recipientEmail = st2;
@@ -56,6 +56,10 @@
 	props.put("mail.smtp.starttls.enable", "true");
 	props.put("mail.smtp.host", smtpHost);
 	props.put("mail.smtp.port", smtpPort);
+	props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+	props.put("mail.smtp.ssl.ciphersuites", "TLS_RSA_WITH_AES_256_CBC_SHA");
+	props.put("mail.debug", "true");
+
 
 	// Create a session with authentication
 	Session ss = Session.getInstance(props, new Authenticator() {
@@ -71,7 +75,7 @@
 		message.setFrom(new InternetAddress(senderEmail));
 
 		// Set To: header field of the header
-		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
+		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("rahulkumar219209200@gmail.com"));
 
 		// Set Subject: header field
 		message.setSubject("Stack Lib Registration Successful");
