@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      background-color: #1b1b32;
+      color: #f5f6f7;
+      font-family: Tahoma;
+      font-size: 16px;
+    }
+
+    h1,
+    p {
+      text-align: center;
+	padding-top: 86px;
+    }
+
+    form {
+      width: 50%;
+      max-width: 400px;
+      min-width: 300px;
+      padding-bottom: 50px;
+      margin: 29px auto;
+    }
+
+    div {
+      border: none;
+      padding: 5px 0;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    input {
+      margin: 10px 0 0 0;
+      width: 50%;
+      min-height: 20px;
+    }
+
+    textarea {
+      background-color: #0a0a23;
+      border: 1px solid #0a0a23;
+      color: #ffffff;
+    }
+
+    .inline {
+      width: unset;
+      margin: 0 0.5em 0 0;
+      vertical-align: middle;
+    }
+
+    .inlineA {
+      width: unset;
+      display: block;
+      margin: 0px;
+    }
+
+    #submit {
+      display: inline;
+      width: 30%;
+      margin: 3em auto;
+      height: 2em;
+      font-size: 1.1rem;
+      background-color: #3b3b4f;
+      border: 1px solid white;
+      min-width: 300px;
+      margin-left: 50px;
+      padding: 9px 9px 15px 9px;
+      
+    }
+
+    #sub1 {
+        width: 30%;
+      margin: 3em auto;
+      height: 2em;
+    }
+  </style>
+</head>
+
+<body>
+	
+	<nav id="navbar">
+    <div id="logo">
+      <img src="images/Logo2.jpg" alt="StackLab.com" class="src">
+    </div>
+    <ul>
+      
+      <li class="item"><a href="#services-container">Services</a></li>
+      <li class="item"><a href="#client-section">About Us</a></li>
+      <li class="item"><a href="#contact">Contact Us</a></li>
+      <li class="item"><a href="StudentLogin.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <h1 id="title">Registration Form</h1>
+  
+  <form Action="Student.jsp" method="post">
+    <div >
+      <label for="name" id="name-label"><pre>Name:              <input type="text" size="50" name="Name" id="Name" placeholder="Enter your name" required></pre></label>
+      <label for="email" id="email-label"><pre>E-mail ID:         <input type="email" size="50" name="Email" id="Email" placeholder="Enter your email id" required></pre></label>
+      <label for="mobile-number"><pre>Contact:           <input type="number" min=1000000000 max=9999999999 name="Contact" id="Contact" placeholder="Enter your Contact number" required></pre></label>
+      <label for="Gender" ><pre>Gender :           <input class="inline" type="radio" name="Gender" value="Male" checked>Male <input class="inline" type="radio" name="Gender" value="Female"/>Female <input class="inline" type="radio" name="Gender" value="Other"/>Other</pre></label>
+      <label for="city" id="" ><pre>City:              <input type="text" size="20" name="City" id="City" placeholder="Enter your City" required></pre></label>
+      <label for="password" id="" ></label><pre>Password:          <input type="password" size="15" name="Password" id="Password" placeholder="Enter your password" required></pre></label>
+          
+    </div>
+
+    <div id="submit">
+        <input id="sub1" type="SUBMIT" value="Submit Form" name="b1">    <input id="sub1" type="Reset" value="Reset">
+    </div>
+
+  </form>
+</body>
+
+</html>
+    
