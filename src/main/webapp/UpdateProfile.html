@@ -3,150 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Update Profile</title>
-<style>
-body{ 
-      width: 100%;
-      height: 100vh;
-      margin: 0;
-      background-color: #1b1b32;
-      color: #f5f6f7;
-      font-family: Tahoma;
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-}
-
-/* Navigation Bar */
-#navbar {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Navigation Bar: logo and image*/
-#logo {
-  margin: 0px 16px;
-    margin-top: 7px;
-    margin-left: 19px;
-}
-#logo img {
-  margin: 0px;
-  max-width: 72px;
-}
-
-
-
-/* Navigation Bar: list styling */
-
-#navbar::before {
-  content: "";
-  position: absolute;
-  height: 113px;
-  width: 100%;
-  z-index: -1;
-  margin-top: -30px;
-  top: 0;
-  left: 0;
-}
-
-#navbar ul {
-  display: flex;
-  margin-top: -24px;
-  font-family: 'Baloo Bhai', cursive;
-  padding-right: 24px;
-  padding-top: 26px;
-}
-
-#navbar ul li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  font-size: 1.1rem;
-}
-#navbar ul li a {
-  color: #fff;
-  display: block;
-  padding: 4px 34px;
-  border-radius: 5px;
-  margin-top: 12px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-}
-#navbar ul li a:hover {
-  color: black;
- background-color: rgb(114, 233, 223);
-}
-
-
-#navbar {
-  display: flex;
-  justify-content: space-between; /* Align items at the ends */
-  align-items: center; /* Center items vertically */
-}
-
-.container{
-        background-color: #a097e3;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 425px;
-}
-.container h1{
-        text-align: center;
-        margin-bottom: 20px;
-        color: black;
-        }
-.container input[type="text"],
-.container input[type="email"],
-.container input[type="password"],
-.container input[type="number"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        box-sizing: border-box;
-        }
-#form{
-        display: block;
-        margin: auto;
-}        
-</style>
 </head>
 <body>
-<nav id="navbar">
-    <div id="logo">
-      <img src="images/Logo2.jpg" alt="StackLab.com" class="src">
-    </div>
-  <ul>
-      
-      <li class="item"><a href="#services-container">Services</a></li>
-      <li class="item"><a href="#client-section">About Us</a></li>
-      <li class="item"><a href="#contact">Contact Us</a></li>
-      <li class="item"><a href="StudentLogin.html">Login</a></li>
-    </ul>
-  </nav>
-  
+	<h1>Update Your Details</h1>
     
- <div class="container">
- <h1>Update Your Details</h1>
- <form Action="Student.jsp" method="post">
- Name:<input type="text" size="50" name="Name" id="Name" placeholder="Enter new name">
- Email id:<input type="email" size="50" name="Email" id="Email" placeholder="Enter new email id">
- Password:<input type="password" size="15" name="Password" id="Password" placeholder="Enter new password">
- Contact No.:<input type="number" min=1000000000 max=9999999999 name="Contact" id="Contact" placeholder="Enter new Contact number">
- City:<input type="text" size="20" name="City" id="City" placeholder="Enter new City">
- <div id="submit">
- <input id="sub1" type="SUBMIT" value="Update" name="b1">    <input id="sub1" type="RESET" value="RESET">
- </div>
- </form>
- </div>
+        <form Action="Student.jsp" method="post">
+        	
+            <pre><p>Name:              <input type="text" size="50" name="Name" id="Name" placeholder="Enter new name"></p></pre>
+            <pre><p>E-mail ID:         <input type="email" size="50" name="Email" id="Email" placeholder="Enter new email id"></p></pre>
+            <pre><p>Password:          <input type="password" size="15" name="Password" id="Password" placeholder="Enter new password"></p></pre>
+            <pre><p>Contact:           <input type="number" min=1000000000 max=9999999999 name="Contact" id="Contact" placeholder="Enter new Contact number"></p></pre>
+            <pre><p>City:              <input type="text" size="20" name="City" id="City" placeholder="Enter new City"></p></pre>
+            
+               
+             <input type="SUBMIT" value="Update" name="b1">    <input type="RESET" value="RESET">
+        </form>
 </body>
 </html>

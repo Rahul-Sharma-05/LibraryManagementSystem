@@ -12,7 +12,7 @@ import javax.mail.internet.*;
 import java.util.Properties;
 import javax.mail.*;
 
-@WebServlet("send")
+@WebServlet("")
 public class Mailing extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

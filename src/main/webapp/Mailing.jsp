@@ -41,7 +41,7 @@
 
 	// Sender's email address
 	String senderEmail = "libcocas777@gmail.com";
-	String senderPassword = "fdbrsqlugjgmdbpk";
+	String senderPassword = "tskjoolsdegahrnh";
 
 	// Recipient's email addresss
 	String recipientEmail = st2;
@@ -57,7 +57,7 @@
 	props.put("mail.smtp.host", smtpHost);
 	props.put("mail.smtp.port", smtpPort);
 	props.put("mail.smtp.ssl.protocols", "TLSv1.2");
-	props.put("mail.smtp.ssl.ciphersuites", "TLS_RSA_WITH_AES_256_CBC_SHA");
+	props.put("mail.smtp.ssl.ciphersuites", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256");
 	props.put("mail.debug", "true");
 
 
