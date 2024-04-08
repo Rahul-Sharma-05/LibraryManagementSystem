@@ -7,18 +7,11 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/javax.servlet-api-4.0.1.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-<<<<<<< HEAD
-	<classpathentry exported="true" kind="lib" path="C:/mail.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/activation-jaf1.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/javax.mail-api-1.6.2.jar"/>
-=======
 	<classpathentry exported="true" kind="lib" path="C:/javax.servlet-api-4.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/mail.jar"/>
->>>>>>> c15850d5286531e0e6c6534d2c6f2dc48e4d29d4
 	<classpathentry exported="true" kind="lib" path="C:/mysql-connector-j-8.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/activation-jaf1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/javax.mail-api-1.6.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

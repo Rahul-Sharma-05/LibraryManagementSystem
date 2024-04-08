@@ -14,9 +14,28 @@
 	<%@ page import = "javax.mail.*"%>
 	<%
 	
-	//String st2 = request.getParameter("Email");
+	String st2 = request.getParameter("Email");
 	
-	
+	int sid = 0;
+	String st1 = null;
+	String st3 = null;
+
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Admin@123");
+
+		// getting Student Id
+		Statement stmt1 = con.createStatement();
+		ResultSet rs = stmt1.executeQuery("SELECT StudentId, StudentName, Password from Student WHERE StudentEmail =" + st2);
+		
+		while (rs.next()) {
+			sid = rs.getInt(1);
+			st1 = rs.getString(2);
+			st3 = rs.getString(3);
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
 
 	// Sending email
 
@@ -25,7 +44,7 @@
 	String senderPassword = "tskjoolsdegahrnh";
 
 	// Recipient's email addresss
-	//String recipientEmail = st2;
+	String recipientEmail = st2;
 
 	// SMTP server details
 	String smtpHost = "smtp.gmail.com";
@@ -34,14 +53,11 @@
 	// Set up JavaMail properties
 	Properties props = new Properties();
 	props.put("mail.smtp.auth", "true");
-	props.put("mail.smtp.ssl.enable", "true");
 	props.put("mail.smtp.starttls.enable", "true");
 	props.put("mail.smtp.host", smtpHost);
 	props.put("mail.smtp.port", smtpPort);
-
 	props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 	props.put("mail.smtp.ssl.ciphersuites", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256");
-	
 	props.put("mail.debug", "true");
 
 
@@ -53,19 +69,22 @@
 	});
 	try {
 		// Create a default MimeMessage object
-		MimeMessage message = new MimeMessage(ss);
+		Message message = new MimeMessage(ss);
 
 		// Set From: header field of the header
-		message.setFrom(senderEmail);
+		message.setFrom(new InternetAddress(senderEmail));
 
 		// Set To: header field of the header
-		message.addRecipient(Message.RecipientType.TO, new InternetAddress("rahulkumar219209200@gmail.com"));
-		
+		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("rahulkumar219209200@gmail.com"));
+
 		// Set Subject: header field
 		message.setSubject("Stack Lib Registration Successful");
 
 		// Now set the actual message
-		message.setText("Hello....Send Successfully..");
+		message.setText("Dear " + st1
+				+ ",\n\nCongratulations..\nNow, You are the valuable member of StackLib.\n\nYour Student Id : "
+				+ sid + "/n/nLogin Password : " + st3
+				+ "\n\nKindly use this creditials to Login into StackLib.\nPlease keep the Id and Password safe.");
 
 		// Send message
 		Transport.send(message);
