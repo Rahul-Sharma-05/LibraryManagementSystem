@@ -1,87 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="UTF-8">
+<title>CodePen - Split-screen Slideshow</title>
+<link href="https://fonts.googleapis.com/css?family=Reem+Kufi"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/HomePageStyle.css">
 
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-  <link rel="stylesheet" href="css/animate.css">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-
-  <!-- Style -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <title>Stack Lib</title>
 </head>
-
 <body>
-  <nav id="navbar">
-    <div id="logo">
-      <img src="images/Logo2.jpg" alt="StackLab.com" class="src">
-    </div>
-    <ul>
-      
-      <li class="item"><a href="#services-container">Services</a></li>
-      <li class="item"><a href="#client-section">About Us</a></li>
-      <li class="item"><a href="#contact">Contact Us</a></li>
-      <li class="item"><a href="StudentLogin.html">Login</a></li>
-    </ul>
-  </nav>
 
-  <div class="content">
+	<nav id="navbar">
+		<div id="logo">
+			<img src="images/Logo1.jpg" alt="StackLab.com" class="src">
+		</div>
+		<ul>
 
-    <div class="container">
-      <h2 class="text-center text-white" style="margin-top: 70px;
-      margin-bottom: 15px";
-  >Welcome!</h2>
-    </div>
+			<li class="item"><a href="#services-container">Services</a></li>
+			<li class="item"><a href="#client-section">About Us</a></li>
+			<li class="item"><a href="#contact">Contact Us</a></li>
+			<li class="item"><a href="StudentLogin.html">Login</a></li>
+		</ul>
+	</nav>
 
-    <div class="site-blocks-cover">
-      <div class="img-wrap">
-        <div class="owl-carousel slide-one-item hero-slider">
-          <div class="slide">
-            <img src="images/hero_1.jpg">
-          </div>
-          <div class="slide">
-            <img src="images/hero_2.jpg">
-          </div>
-          <div class="slide">
-            <img src="images/hero_3.jpg">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto align-self-center">
-            <div class="intro">
-              <div class="heading" style="margin-top: -137px;">
-                <h1 class="text-white font-weight-bold">Stack<br>Lib</h1>
-              </div>
-              <div class="text sub-text">
-                <p>Our aim is to provide you best services. Our website provide you many features with great ease. We'r
-                  dedicated to make your experience wonderful.</p>
-                <p><a href="RegistrationForm.html" target="_blank"
-                    class="btn btn-outline-primary btn-md btn-pill">Register</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- END .site-blocks-cover -->
-  </div>
+	<!-- partial:index.partial.html -->
+	<div id="container">
+		<ul id="slides">
+			<li class="slide">
+				<div class="slide-partial slide-left">
+					<img
+						src="images/img1a.jpg" />
+				</div>
+				<div class="slide-partial slide-right">
+					<img
+						src="images/img1b.jpg" />
+				</div>
+				<h1 class="title">
+					<span class="title-text"></span>
+				</h1>
+			</li>
+			
+			<li class="slide">
+				<div class="slide-partial slide-left">
+					<img
+						src="images/img2a.jpg" />
+				</div>
+				<div class="slide-partial slide-right">
+					<img
+						src="images/img2b.jpg" />
+				</div>
+				<h1 class="title">
+					<span class="title-text"></span>
+				</h1>
+			</li>
+					
+					<div class="reg-div">
+						<p>Our aim is to provide you best services.<br>Our website provide
+					you many features with great ease.<br>We'r dedicated to make your
+					experience wonderful.<br></p>
+						<form action="RegistrationForm.html">
+							<button type="submit" value="Register" class="reg-button"></button>
+						</form>
+						
+					</div>
+					
 
+			<li class="slide">
+				<div class="slide-partial slide-left">
+					<img
+						src="images/img3a.jpg" />
+				</div>
+				<div class="slide-partial slide-right">
+					<img
+						src="images/img3b.jpg" />
+				</div>
+				<h1 class="title">
+					<span class="title-text"></span>
+				</h1>
+			</li>
+			<li class="slide">
+				<div class="slide-partial slide-left">
+					<img
+						src="images/img4a.jpg" />
+				</div>
+				<div class="slide-partial slide-right">
+					<img
+						src="images/img4b.jpg" />
+				</div>
+				<h1 class="title">
+					<span class="title-text"></span>
+				</h1>
+			
+		</ul>
+		<ul id="slide-select">
+			<li class="btn prev"><</li>
+			<li class="selector"></li>
+			<li class="selector"></li>
+			<li class="selector"></li>
+			<li class="selector"></li>
+			<li class="selector"></li>
+			<li class="btn next">></li>
+		</ul>
+	</div>
+	<a class="codepen-link" href="https://www.codepen.io/seanfree"
+		target="_blank"></a>
+	<!-- partial -->
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="css/script.js"></script>
 
-
-  <script src="css/js/jquery-3.3.1.min.js"></script>
-  <script src="css/js/popper.min.js"></script>
-  <script src="css/js/bootstrap.min.js"></script>
-  <script src="css/js/owl.carousel.min.js"></script>
-  <script src="css/js/main.js"></script>
 </body>
-
 </html>
