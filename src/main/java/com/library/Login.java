@@ -31,8 +31,7 @@ public class Login extends HttpServlet {
     	try{  
     		Class.forName("com.mysql.jdbc.Driver");  
     		Connection con=DriverManager.getConnection(  
-    		"jdbc:mysql://localhost:3306/test","root","Admin@123");  
-    		
+    		"jdbc:mysql://localhost:3306/test","root","Admin@123"); 
     		PreparedStatement pstm = con.prepareStatement("SELECT AdminName, password FROM Admin WHERE AdminId=?"); 
     		pstm.setInt(1, id);
     		ResultSet rs = pstm.executeQuery();
@@ -40,6 +39,7 @@ public class Login extends HttpServlet {
     		if (rs.next()) {
     			String pass = rs.getString("password");
     			if(givenPass.equals(pass)) {
+    				System.out.println("Admin Login Done...");
     				
     				out.println("<script>alert('Login Successfull..')</script>");
     				String AdminName = rs.getString("AdminName");

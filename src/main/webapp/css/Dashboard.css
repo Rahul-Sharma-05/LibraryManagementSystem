@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+#navbar2 {
+    text-align: initial;
+    border-right: 2px solid rgb(0, 0, 0);
+    padding-right: 14px;
+    position: relative;
+    padding-left: 0px;
+    font-family: sans-serif;
+    left: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #69c4d5;
+    width: 270px;
+  }
+  
+#navbar2::before {
+    content: "";
+    background: url(https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png?w=1080&h=1080&q=100&fm=webp) no-repeat center center/cover;
+    position: absolute;
+    width: 104px;
+    height: 84px;
+    margin-left: -3px;
+    margin-top: -3px;
+    z-index: -1;
+}
+
+  main {
+      text-align: left;
+      margin-left: 290px; 
+      margin-right: 50px;
+      top: 0;
+  }
+  
+  .navul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 109em;
+    margin-inline-start: -40px;
+    margin-inline-end: -14px;
+    padding-inline-start: 40px;
+  }
+  
+  .navli {
+    padding: 12px 18px;
+    border: 1px solid #09c2ff;
+    list-style: none;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+ #navbar2 header {
+    font-size: 26px;
+    margin-left: 70px;
+    margin-top: 3px;
+    padding: 10px 0px;
+    color: #c0c0c0;
+    position: relative;
+  }
+  
+  main header {
+      font-size: 40px;
+      color: #240868;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-top: 44px;
+      margin-bottom: 0px;
+  }
+  
+  main::before {
+      content: "";
+      background: url(https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png?w=1080&h=1080&q=100&fm=webp) no-repeat center center/cover;
+      position: relative;
+      width: 746px;
+      height: 883px;
+      margin-top: -157px;
+      margin-left: -29px;
+      z-index: -1;
+      opacity: 0.55;
+  }
